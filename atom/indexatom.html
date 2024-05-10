@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+/* background-color: red; */
+width: 100%;
+height: 450px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+        }
+        .atom{
+            border: 2px solid black;
+            background-color: blue;
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            /* display: flex; */
+            /* align-items: center; */
+            /* justify-content: center; */
+        }
+        .nucleous{
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: absolute;
+            top: 100px;
+            right: 100px;
+        }
+        
+        .proton,.neutron{
+            border: 1px solid black;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        .proton{
+            background-color: yellow;
+
+        }
+        .neutron{
+            background-color: green;
+        }
+        .proton1{
+            position: absolute;
+            top: 5px;
+            right: 30%;
+        }
+.proton2{
+    position: absolute;
+            top: 25px;
+            right: 10%;
+}
+.proton3{
+    position: absolute;
+            top: 25px;
+            right: 50%;
+}
+.proton4{
+    position: absolute;
+            top: 45px;
+            right: 30%;
+}
+.proton5{
+    position: absolute;
+            top: 45px;
+            right: 70%;
+}
+.proton6{
+    position: absolute;
+            top: 65px;
+            right: 50%;
+}
+.neutron1{
+    position: absolute;
+            top: 5px;
+            right: 50%;
+}
+.neutron2{
+    position: absolute;
+            top: 25px;
+            right: 30%;
+}
+.neutron3{
+    position: absolute;
+            top: 25px;
+            right: 70%;
+}
+.neutron4{
+    position: absolute;
+            top: 45px;
+            right: 10%;
+}
+.neutron5{
+    position: absolute;
+            top: 45px;
+            right: 50%;
+}
+.neutron6{
+    position: absolute;
+            top: 65%;
+            right: 30%;
+}
+.electron{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    background-color: rgb(209, 29, 29);
+    width: 20px;
+    height: 20px;
+border-radius: 50px;
+transform: translate(-50%,-50%);
+animation: orbit 3s linear infinite;
+}
+.electron1 {
+    animation-delay: 0s;
+  }
+
+  .electron2 {
+    animation-delay: 0.5s;
+  }
+
+  .electron3 {
+    animation-delay: 1s;
+  }
+
+  .electron4 {
+    animation-delay: 1.5s;
+  }
+  .electron5 {
+    animation-delay: 2s;
+  }
+  .electron6 {
+    animation-delay: 2.5s;
+  }
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes orbit {
+    0% {
+      transform: translate(-20%, -20%) rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="atom">
+            <div class="nucleous">
+                <div class="proton proton1"></div>
+                <div class="proton proton2"></div>
+                <div class="proton proton3"></div>
+                <div class="proton proton4"></div>
+                <div class="proton proton5"></div>
+                <div class="proton proton6"></div>
+                <div class="neutron neutron1"></div>
+                <div class="neutron neutron2"></div>
+                <div class="neutron neutron3"></div>
+                <div class="neutron neutron4"></div>
+                <div class="neutron neutron5"></div>
+                <div class="neutron neutron6"></div>
+            </div>
+            <div class="electron electron1"></div>
+            <div class="electron electron2"></div>
+            <div class="electron electron3"></div>
+            <div class="electron electron4"></div>
+            <div class="electron electron5"></div>
+            <div class="electron electron6"></div>
+        </div>
+    </div>
+</body>
+</html>

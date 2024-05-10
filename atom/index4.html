@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Carbon Atom Diagram</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .atom {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ddd;
+    animation: rotate 4s linear infinite;
+  }
+
+  .nucleus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: #ff9999;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .proton,
+  .neutron {
+    width: 20px;
+    height: 20px;
+    background-color: #ffcc00; /* Yellow for protons */
+    border-radius: 50%;
+  }
+
+  .neutron {
+    background-color: #999; /* Grey for neutrons */
+  }
+
+  .electron1,
+  .electron2,
+  .electron3,
+  .electron4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #66ccff;
+    border-radius: 50%;
+    animation: orbit 2s linear infinite;
+  }
+
+  .electron1 {
+    animation-delay: 0s;
+  }
+
+  .electron2 {
+    animation-delay: 0.5s;
+  }
+
+  .electron3 {
+    animation-delay: 1s;
+  }
+
+  .electron4 {
+    animation-delay: 1.5s;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes orbit {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(80px) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(80px) rotate(-360deg);
+    }
+  }
+</style>
+</head>
+<body>
+<div class="atom">
+  <div class="nucleus">
+    <div class="proton"></div>
+    <div class="neutron"></div>
+  </div>
+  <div class="electron1"></div>
+  <div class="electron2"></div>
+  <div class="electron3"></div>
+  <div class="electron4"></div>
+</div>
+</body>
+</html>

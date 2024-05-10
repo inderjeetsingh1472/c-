@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Solar System Model</title>
+    <style>
+      #sun, #mercury, #venus, #earth, #mars {
+        position: absolute;
+        animation: orbit 10s linear infinite;
+      }
+
+      #sun {
+        width: 50px;
+        height: 50px;
+        background-color: yellow;
+    }
+
+#mercury {
+  width: 10px;
+  height: 10px;
+  background-color:  rgb(165, 158, 158);
+}
+
+#venus {
+  width: 20px;
+  height: 20px;
+  background-color: orange;
+}
+
+#earth {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+}
+
+#mars {
+  width: 10px;
+  height: 10px;
+  background-color: brown;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="sun"></div>
+    <div id="mercury"></div>
+    <div id="venus"></div>
+    <div id="earth"></div>
+    <div id="mars"></div>
+
+    <script>
+      const planets = document.querySelectorAll('.planet');
+
+      const orbit = function () {
+        planets.forEach((planet) => {
+          planet.style.webkitAnimation = `orbit ${planet.dataset.speed}s 
+linear infinite`;
+        });
+      };
+
+      orbit();
+
+      setInterval(orbit, 1000);
+    </script>
+  </body>
+</html>

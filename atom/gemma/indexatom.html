@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #atom {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: black;
+      }
+
+      #nucleus {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: yellow;
+      }
+
+      #electrons {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="atom">
+      <div id="nucleus">
+      </div>
+      <div id="electrons">
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const nucleus = document.getElementById("nucleus");
+    const electrons = document.getElementById("electrons");
+
+    nucleus.style.position = "absolute";
+    nucleus.style.top = "50px";
+    nucleus.style.left = "50px";
+
+    electrons.style.position = "absolute";
+    electrons.style.top = "20px";
+    electrons.style.left = "20px";
+  </script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form</title>
+  </head>
+
+  <body>
+    <form>
+      <label for="num1">Enter num1:</label>
+      <input type="number" id="num1">
+
+      <label for="num2">Enter num2:</label>
+      <input type="number" id="num2">
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+  </body>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const num1 = Number(document.querySelector('#num1').value);
+      const num2 = Number(document.querySelector('#num2').value);
+
+      const result = num1 + num2;
+
+      document.querySelector('#result').innerHTML = `The result is: 
+${result}`;
+    });
+  </script>
+</html>
+
